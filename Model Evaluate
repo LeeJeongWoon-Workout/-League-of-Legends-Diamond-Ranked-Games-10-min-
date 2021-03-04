@@ -1,0 +1,12 @@
+plt.figure(figsize=(15,8))
+plt.bar(X_scaled.columns,model_lr.coef_[0,:])
+plt.xticks(rotation=90)
+plt.show()
+
+pred=model_xgb.predict(X_test)
+print(classification_report(y_test,pred))
+
+plt.figure(figsize=(80,10))
+plt.bar(X_scaled.columns,model_xgb.feature_importances_)
+plt.xticks(rotation=100)
+plt.show()
