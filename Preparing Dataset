@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+!kaggle datasets download -d bobbyscience/league-of-legends-diamond-ranked-games-10-min
+!unzip "*.zip"
+!ls
+
+df=pd.read_csv("high_diamond_ranked_10min.csv")
+
+df.head(30)
